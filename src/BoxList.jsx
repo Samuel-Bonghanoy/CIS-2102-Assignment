@@ -5,7 +5,6 @@ function BoxList({ studentList, searchedId }) {
   const res = studentList.filter(
     (stud) => stud.idNumber === Number(searchedId)
   );
-  console.log(res);
 
   return (
     <div className="list">

@@ -1,0 +1,9 @@
+.waifu {
+  height: 15rem;
+  width: 10rem;
+}
+
+.waifu-container {
+  display: flex;
+  justify-content: center;
+}

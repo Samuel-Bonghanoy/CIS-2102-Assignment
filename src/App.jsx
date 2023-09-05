@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import BoxList from "./BoxList";
+import WaifuIsLaifu from "./WaifuIsLaifu";
 
 const students = [
   {
@@ -42,6 +43,7 @@ function App() {
     <>
       <input className="search" onChange={(e) => setId(e.target.value)}></input>
       <BoxList studentList={students} searchedId={id} />
+      <WaifuIsLaifu />
     </>
   );
 }
