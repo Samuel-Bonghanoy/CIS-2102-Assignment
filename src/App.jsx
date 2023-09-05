@@ -1,32 +1,49 @@
 import { useState } from "react";
 import "./App.css";
+import BoxList from "./BoxList";
 
 const students = [
   {
-    imdbID: "tt1375666",
-    Title: "Inception",
-    Year: "2010",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    Name: "Sam",
+    Course: "BS-CS",
+    Age: 20,
+    idNumber: 12345,
   },
   {
-    imdbID: "tt0133093",
-    Title: "The Matrix",
-    Year: "1999",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    Name: "Dick",
+    Course: "BS-IT",
+    Age: 20,
+    idNumber: 22345,
   },
   {
-    imdbID: "tt6751668",
-    Title: "Parasite",
-    Year: "2019",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
+    Name: "Johnny",
+    Course: "BS-FM",
+    Age: 20,
+    idNumber: 32345,
+  },
+  {
+    Name: "Willy",
+    Course: "BS-MA",
+    Age: 20,
+    idNumber: 42345,
+  },
+  {
+    Name: "Richard",
+    Course: "BS-A",
+    Age: 20,
+    idNumber: 52345,
   },
 ];
 
 function App() {
-  return <></>;
+  const [id, setId] = useState("");
+
+  return (
+    <>
+      <input className="search" onChange={(e) => setId(e.target.value)}></input>
+      <BoxList studentList={students} searchedId={id} />
+    </>
+  );
 }
 
 export default App;
